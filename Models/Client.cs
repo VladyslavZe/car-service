@@ -1,21 +1,19 @@
 
 namespace car_service.Models
 {
-  public class Service
+  public class Client
   {
     public int Id { get; set; }
     public string Name { get; set; }
-    public decimal Price { get; set; }
 
-    public Service()
+    public Client()
     {
     }
 
-    public Service(int id, string name, decimal price)
+    public Client(int id, string name)
     {
       this.Id = id;
       this.Name = name;
-      this.Price = price;
     }
   }
 }
