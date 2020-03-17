@@ -10,9 +10,9 @@ namespace car_service.Models
     {
     }
 
-    public OrderItem(int id, int idService)
+    public OrderItem(int idOrder, int idService)
     {
-      this.IdOrder = id;
+      this.IdOrder = idOrder;
       this.IdService = idService;
     }
   }
