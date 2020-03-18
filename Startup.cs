@@ -11,6 +11,7 @@ using car_service.Models;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using car_service.Services;
 
 namespace car_service
 {
@@ -47,6 +48,7 @@ namespace car_service
       {
         configuration.RootPath = "ClientApp/build";
       });
+      services.AddScoped<ServiceManagement, ServiceManagement>();
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
