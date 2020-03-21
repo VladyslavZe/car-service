@@ -15,15 +15,15 @@ namespace car_service.Services
       this._context = context;
     }
 
-    internal List<Service> Get()
-    {
-      return this._context.Services.ToList();
-    }
-
-    internal void Create(Service service)
+    public void Create(Service service)
     {
       this._context.Services.Add(service);
       _context.SaveChanges();
+    }
+
+    public List<Service> Get()
+    {
+      return this._context.Services.ToList();
     }
   }
 }

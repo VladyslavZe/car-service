@@ -3,6 +3,7 @@ namespace car_service.Models
 {
   public class OrderItem
   {
+    public int Id { get; set; }
     public int IdOrder { get; set; }
     public int IdService { get; set; }
 

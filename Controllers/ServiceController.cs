@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace car_service.Controllers
 {
-  [Route("api/service")]
+  [Route("service")]
   [ApiController]
   public class ServiceController : ControllerBase
   {
@@ -15,17 +15,17 @@ namespace car_service.Controllers
       this._service = service;
     }
 
-    [HttpGet]
-    public List<Service> GetService(Service service)
-    {
-      return this._service.Get();
-    }
 
     [HttpPost]
     public void CreateService(Service service)
     {
-      _service.Create(service);
+      this._service.Create(service);
     }
 
+    [HttpGet]
+    public List<Service> GetService()
+    {
+      return this._service.Get();
+    }
   }
 }
