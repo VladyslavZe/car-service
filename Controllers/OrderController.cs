@@ -11,12 +11,35 @@ namespace car_service.Controllers
   public class OrderController : ControllerBase
   {
     private ServiceOrder _order;
-    private DateTime _date;
-    private int _idClient;
-    public OrderController()
+    private int _orderId;
+    public OrderController(ServiceOrder order)
     {
-      this._date = new DateTime();
+      this._order = order;
     }
 
+    [HttpPost]
+    public void CreateOrder(Order order)
+    {
+      this._orderId = order.Id;
+      this._order.Create(order);
+    }
+
+    [HttpGet]
+    public List<Order> GetService()
+    {
+      return this._order.Get();
+    }
+
+    [HttpDelete]
+    public void DeleteAllOrders()
+    {
+      this._order.DeleteAll();
+    }
+
+    [HttpPost("{idService}")]
+    public void AddService(int idService)
+    {
+      this._order.AddService(idService, _orderId);
+    }
   }
 }

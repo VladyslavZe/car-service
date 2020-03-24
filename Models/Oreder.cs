@@ -8,7 +8,7 @@ namespace car_service.Models
   {
     public int Id { get; set; }
     public int IdClient { get; set; }
-    public DateTime DateTime { get; }
+    // public DateTime DateTime { get; set; }
     private List<Service> Services;
 
     public Order()
@@ -19,7 +19,7 @@ namespace car_service.Models
     {
       this.Id = id;
       this.IdClient = IdClient;
-      this.DateTime = new DateTime();
+      // this.DateTime = new DateTime();
       this.Services = new List<Service>();
     }
   }

@@ -13,5 +13,28 @@ namespace car_service.Services
     {
       this._context = context;
     }
+
+    public void Create(Order order)
+    {
+      this._context.Orders.Add(order);
+      _context.SaveChanges();
+    }
+    public List<Order> Get()
+    {
+      return this._context.Orders.ToList();
+    }
+
+    public void DeleteAll()
+    {
+      this._context.Orders.RemoveRange(_context.Orders.ToList());
+      this._context.SaveChanges();
+    }
+
+    public void AddService(int idService, int orderId)
+    {
+      System.Console.WriteLine($"ИД Сервиса - {idService}, ИД Заказа -  {orderId} ");
+      // int idOrder = this._context.Orders.Find(id);
+      // this._context.OrderItems(idService, orderId);
+    }
   }
 }
