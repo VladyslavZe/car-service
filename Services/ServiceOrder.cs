@@ -30,11 +30,6 @@ namespace car_service.Services
       this._context.SaveChanges();
     }
 
-    public void AddService(int idService, int orderId)
-    {
-      System.Console.WriteLine($"ИД Сервиса - {idService}, ИД Заказа -  {orderId} ");
-      // int idOrder = this._context.Orders.Find(id);
-      // this._context.OrderItems(idService, orderId);
-    }
+
   }
 }

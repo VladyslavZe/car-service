@@ -11,7 +11,6 @@ namespace car_service.Controllers
   public class OrderController : ControllerBase
   {
     private ServiceOrder _order;
-    // public int _orderId;
     public OrderController(ServiceOrder order)
     {
       this._order = order;
@@ -20,7 +19,6 @@ namespace car_service.Controllers
     [HttpPost]
     public void CreateOrder(Order order)
     {
-      // this._orderId = order.Id;
       this._order.Create(order);
     }
 
@@ -36,10 +34,10 @@ namespace car_service.Controllers
       this._order.DeleteAll();
     }
 
-    [HttpPost("{idService}")]
-    public void AddService(int idService, int idOrder = 1)
-    {
-      this._order.AddService(idService, idOrder);
-    }
+    // [HttpPost]
+    // public void AddService(OrderItem orderItem)
+    // {
+    //   this._order.AddService(orderItem);
+    // }
   }
 }

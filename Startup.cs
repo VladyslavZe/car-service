@@ -50,6 +50,7 @@ namespace car_service
       });
       services.AddScoped<ServiceManagement, ServiceManagement>();
       services.AddScoped<ServiceOrder, ServiceOrder>();
+      services.AddScoped<ServiceInputData, ServiceInputData>();
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
